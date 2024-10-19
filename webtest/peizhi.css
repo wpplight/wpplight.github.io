@@ -59,3 +59,27 @@
     height: 250px;
     
    }
+        .container {
+            display: flex;
+            /* 使用 Flexbox 布局 */
+            align-items: center;
+            /* 垂直居中对齐 */
+            border: 1px solid #ddd;
+            /* 可选：边框 */
+            padding: 10px;
+            /* 内边距 */
+            margin: 0;
+            background-color: #b4b9e7;
+            width: 800px;
+        }
+    
+        .container_img {
+            width: 100px;
+            /* 图片宽度 */
+            height: auto;
+            /* 高度自适应 */
+            margin-right: 20px;
+            /* 图片与文本之间的间距 */
+        }
+    
+       
