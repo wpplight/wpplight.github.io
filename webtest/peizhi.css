@@ -1,0 +1,61 @@
+    nav {
+        background-color: rgb(165, 165, 222);
+    }
+
+    body {
+        background-color: rgb(189, 198, 232);
+
+    }
+
+
+
+    h2 {
+        background-color: rgb(156, 109, 200);
+    }
+
+    .jinggao {
+        color: rgb(217, 41, 41);
+    }
+    .jintie{
+        margin-bottom: 0;
+    }
+
+    .fangda{
+        font-size: large;
+    }
+
+    
+    
+        .card {
+                
+                width: 500px;
+                /* 卡片宽度 */
+                padding: 20px;
+                /* 内边距 */
+                margin: 20px;
+                /* 外边距 */
+                background-color: #aaae40;
+                /* 背景色 */
+                border: 1px solid #32b611;
+                /* 边框 */
+                border-radius: 15px;
+                /* 圆角 */
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                /* 阴影 */
+            }
+          .picleft{
+                float: left;
+                margin-right: 20px;
+                position: relative;
+                    top:0%;
+                    left: 0%;
+          }            
+
+   
+
+   #insert_right{
+  
+    width: 500px;
+    height: 250px;
+    
+   }
