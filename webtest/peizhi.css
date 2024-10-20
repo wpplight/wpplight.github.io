@@ -72,18 +72,20 @@
         .container {
             display: flex;
             /* 使用 Flexbox 布局 */
-            align-items: flex-start;
+            align-items: left;
             /* 垂直居中对齐 */
-            border: 1px solid #ddd;
+            border: 1px solid #000000;
             /* 可选：边框 */
             padding: 10px;
             /* 内边距 */
             margin: 0;
-            background-color: #b4b9e7;
+            background-color:transparent ;
             width: 800px;
+         
         }
     
-        .container_img {
+        .container img {
+           
             width: 100px;
             /* 图片宽度 */
             height: auto;
@@ -96,7 +98,7 @@
             width: 150px;
             text-decoration: none;
             /* 去除下划线 */
-            color: #333;
+            color: #a6a6a6;
             /* 文字颜色 */
             background-color: transparent;
             /* 背景颜色透明 */
@@ -143,7 +145,7 @@
                     /* 水平居中对齐 */
                     text-decoration: none;
                     /* 去除下划线 */
-                   color : #333;
+                   color : #c4c4c4;
                     /* 文字颜色 */
                     width: 120px;
                     /* 模块宽度 */
@@ -166,4 +168,35 @@
                     text-align: center;
                     /* 文本居中 */
                 }
+                 .modulea {
+                     display: flex;
+                     /* 链接部分使用 Flexbox */
+                     flex-direction: column;
+                     /* 垂直排列图片和文本 */
+                     align-items: center;
+                     /* 水平居中对齐 */
+                     text-decoration: none;
+                     /* 去除下划线 */
+                     color: #ffffff;
+                     /* 文字颜色 */
+                     width: 60%;
+                     /* 模块宽度 */
+                 }
         
+                 .modulea img {
+                     width: 100px;
+                     /* 图片宽度 */
+                     height: auto;
+                     /* 高度自适应 */
+                     border-radius: 15px;
+                     /* 圆角效果 */
+                     margin-bottom: 10px;
+                     /* 图片与文本之间的间距 */
+                 }
+        
+                 .modulea p {
+                     margin: 0;
+                     /* 去除段落的默认外边距 */
+                     text-align:left;
+                     /* 文本居中 */
+                 }
