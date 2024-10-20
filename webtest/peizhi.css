@@ -62,7 +62,7 @@
         .container {
             display: flex;
             /* 使用 Flexbox 布局 */
-            align-items: center;
+            align-items: flex-start;
             /* 垂直居中对齐 */
             border: 1px solid #ddd;
             /* 可选：边框 */
