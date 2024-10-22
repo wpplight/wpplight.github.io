@@ -5,7 +5,14 @@
     a {
         color: white;
         text-decoration: none;
+
     }
+    /* a:hover {
+        transition: color 0.3s ease, transform 0.3s ease;
+            color: #7876e9;
+            transform: scale(1.1);
+ } */
+
     body {
         color:aliceblue;
         background-color: rgb(10, 10, 10);
@@ -131,7 +138,7 @@
                     /* 居中对齐 */
                     padding: 20px;
                     /* 内边距 */
-                   width: 50%;
+                   width: 65%;
                     background: transparent;
                     
                 }
@@ -147,12 +154,12 @@
                     /* 去除下划线 */
                    color : #c4c4c4;
                     /* 文字颜色 */
-                    width: 120px;
+                    width: 250px;
                     /* 模块宽度 */
                 }
         
                 .module img {
-                    width: 100px;
+                    width: 250px;
                     /* 图片宽度 */
                     height: auto;
                     /* 高度自适应 */
@@ -168,6 +175,18 @@
                     text-align: center;
                     /* 文本居中 */
                 }
+
+                #u:hover {
+                    transition: color 0.3s ease, transform 0.3s ease;
+                    color: #7876e9;
+                    /* 鼠标悬停时的文本颜色 */
+                 
+                }
+
+                #d:hover {transform: scale(1.1);
+                    /* 鼠标悬停时的放大效果 */
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
                  .modulea {
                      display: flex;
                      /* 链接部分使用 Flexbox */
