@@ -3,40 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Component</title>
-    <link rel="stylesheet" href="peizhi.css">
-    <style>
-        body {
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
+    <title>C++ Integration</title>
+    <script>
+        function callCpp() {
+            const input = document.getElementById('input').value;
+            fetch('http://localhost:5000/compute', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: input })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerText = 'Result: ' + data.result;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         }
-    
-        video {
-            width: 600px;
-            /* 设置视频宽度 */
-            height: auto;
-            /* 高度自适应 */
-            display: block;
-            /* 使视频成为块级元素 */
-            margin: 0 auto;
-            /* 居中显示 */
-        }
-    </style>
+    </script>
 </head>
 
 <body>
-    <h1>英语演出效果视频（自用）</h1>
-    <video controls>
-        <source src="vedio\20241023-1139-53.3355457.mp4" type="video/mp4"> 
-        你的浏览器不支持视频标签。
-    </video>
-    <br>
-    <video controls>
-        <source src="vedio/20241023-1139-53.3355457_Sub_01.00.mp4" type="video/mp4">
-        你的浏览器不支持视频标签。
-    </video>
+    <h1>Call C++ from HTML</h1>
+    <input type="text" id="input" placeholder="Enter your data">
+    <button onclick="callCpp()">Submit</button>
+    <p id="output"></p>
 </body>
 
 </html>
