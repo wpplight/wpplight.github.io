@@ -38,4 +38,38 @@ background-color: #323232;
     /* 点击时稍微缩小 */
 }
 
+#but2{
+    display: none;
+}
 
+.button2 {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.button2:hover {
+    background: linear-gradient(90deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    /* 悬停时稍微抬起 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* 悬停时加深阴影 */
+}
+
+.button2:active {
+    transform: translateY(1px);
+    /* 点击时稍微下沉 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* 点击时减小阴影 */
+}

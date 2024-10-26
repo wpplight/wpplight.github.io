@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
-    <title>C++ Integration</title>
-    <script>
-        function callCpp() {
-            const input = document.getElementById('input').value;
-            fetch('http://localhost:5000/compute', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ input: input })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('output').innerText = 'Result: ' + data.result;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始不可见按钮示例</title>
+    <style>
+        #myButton {
+            display: none;
+            /* 初始不可见 */
         }
-    </script>
+    </style>
 </head>
 
 <body>
-    <h1>Call C++ from HTML</h1>
-    <input type="text" id="input" placeholder="Enter your data">
-    <button onclick="callCpp()">Submit</button>
-    <p id="output"></p>
+
+    <button id="myButton">点击我</button>
+    <button onclick="showButton()">显示按钮</button>
+
+    <script>
+        function showButton() {
+            document.getElementById("myButton").style.display = "block"; // 显示按钮
+        }
+    </script>
+
 </body>
 
 </html>
