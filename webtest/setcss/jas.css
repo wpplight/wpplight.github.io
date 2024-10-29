@@ -73,3 +73,27 @@ background-color: #323232;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     /* 点击时减小阴影 */
 }
+
+input[type="text"] {
+    padding: 8px;
+    /* 内边距 */
+    font-size: 12px;
+    /* 字体大小 */
+    border: 1px solid #000000;
+    /* 边框颜色 */
+    border-radius: 8px;
+    /* 圆角 */
+    width: 10%;
+    /* 宽度占满容器 */
+    box-sizing: border-box;
+    /* 使得padding和border包含在width中 */
+    transition: border-color 0.3s;
+    /* 边框颜色过渡效果 */
+}
+
+input[type="text"]:focus {
+    border-color: #fdff71;
+    /* 获得焦点时边框颜色 */
+    outline: none;
+    /* 去除默认的焦点轮廓 */
+}
