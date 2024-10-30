@@ -1,6 +1,7 @@
 var end = [];
 var data = [];
 var s = "";
+var s_sum = "";
 var I;
 var n = 0;
 
@@ -64,20 +65,25 @@ function add_zuobiao()
 {
     var input = [];
     var m;
+    ch = "";
     for (var i = 1; i <= 8; i++)
     {
         m = document.getElementById(`inputField${i}`).value;
         if (is_need(m))
         {
             input.push(parseFloat(m));
+            ch += m + " ";
         }
         else
             {
             alert("请全部输入数字！");
+            ch = "";
             return;
         }
+        ch += "<br>";
 
     }
+    s_sum += ch;
     if (input.length == 8)
     {   data.push([]);
         for (var i = 0; i < 4; i++)
@@ -106,7 +112,7 @@ function add_zuobiao()
 
 function add_chazhi()
 {
-    var input = [];
+
     var m;
     for (var i = 1; i <= 4; i++)
     {
@@ -184,7 +190,9 @@ function end_ans()
         }
         da += "<br>";
     }
-        document.getElementById("sihe").innerHTML = "差值表格为" + da;
+    if (s_sum != "")
+        document.getElementById("yuanlai").innerHTML = "输入坐标位置为<br>" + s_sum;
+        document.getElementById("sihe").innerHTML = "差值表格为<br>" + da;
     for (var i = 0; i < 4; i++)
     {
         end.push((data[0][i] + data[1][i] + data[2][i] + data[3][i]) / 4);
