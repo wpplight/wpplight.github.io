@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大物实验计算器</title>
+    <link rel="stylesheet" href="setcss/peizhi.css">
+    <link rel="stylesheet" href="setcss/jas.css">
+</head>
+<h1 class="jintie">三明治与山药与大学生</h1>
+
+<nav>
+    <b>
+        <a href="../index.html" id="u">首页</a>&nbsp;
+        <a href="detail.html" id="u">软件详情</a>&nbsp;
+        <a href="download.html" id="u">下载</a>&nbsp;
+        <a href="tool.html" id="u">工具</a>&nbsp;
+        <a href="contact.html" id="u">联系我们</a>&nbsp;
+    </b>
+</nav>
+<br>
+
+<body>
+    <p>实验现象填空图片</p>
+    <button class="button1" onclick="tu()" id="btn">查看前方流程图</button>
+    <button class="button1" onclick="notu()" style="display:none;" id="btn2">收起</button>
+    <img src="imagefile/saimanliucheng.png" alt="saiman" id="saimanliucheng" style="display:none;">
+    <p>数据处理与误差估算</p>
+    <button class="button1" onclick="showin_zuobiao()" id="btn3">输入坐标位置</button>
+    <button class="button1" onclick="showin_chazhi()" id="btn4">输入算好的差值位置</button>
+    <div id="yuanshi" style="display:none;">
+        <p>当前已输入<span id="num">0</span>组坐标点，还可以输入<span id="canshu">4</span>组坐标点。</p>
+        请依次向其中输入表格每行从左到右的值：
+        <input type="text" id="inputField1" placeholder=""  class="i1">
+        <input type="text" id="inputField2" placeholder="" class="i1">
+        <input type="text" id="inputField3" placeholder="" class="i1">
+        <input type="text" id="inputField4" placeholder="" class="i1">
+        <input type="text" id="inputField5" placeholder="" class="i1">
+        <input type="text" id="inputField6" placeholder="" class="i1">
+        <input type="text" id="inputField7" placeholder="" class="i1">
+        <input type="text" id="inputField8" placeholder="" class="i1">
+        <button class="button1" onclick="add_zuobiao()" id="btn5">push</button>
+        <button class="button1" onclick="pop_zuobiao()" id="btn6">pop</button>
+        <p id="zhanshi"></p>
+        <div id="yes" style="display: none;">
+            <p>输入完成</p>
+            <button class="button1" onclick="chuli()" id="btn7">处理</button>
+        </div>
+        
+    </div>
+
+    <div id="chazhi" style="display:none;">
+    <p>当前已输入<span id="num1">0</span>组坐标点，还可以输入<span id="canshu1">4</span>组坐标点。</p>
+    <input type="text" id="chazhi1" placeholder="" class="i1">
+    <input type="text" id="chazhi2" placeholder="" class="i1">
+    <input type="text" id="chazhi3" placeholder="" class="i1">
+    <input type="text" id="chazhi4" placeholder="" class="i1">
+    <button class="button1" onclick="add_chazhi()" id="btn10">push</button>
+    <button class="button1" onclick="pop_chazhi()" id="btn11">pop</button>
+    <div id="yes1" style="display: none;">
+        <p>输入完成</p>
+        <button class="button1" onclick="chuli()" id="btn12">处理</button>
+    </div>
+    </div>
+
+    <div id="chuli" style="display:none;">
+        请输入励磁电流：<input type="text" id="LI" placeholder="" class="i1">
+        <button class="button1" onclick="end_ans()" id="btn7">确定</button>
+        <p id="sihe"></p>
+        <p id="pingjun"></p>
+        <p id="result"></p>
+        <p id="error"></p>
+    </div>
+
+
+    <script src="jsfunc/phytest_saiman.js"></script>
+</body>
+<hr>
+
+<div id="end">
+    <p>
+
+        <small>
+            <p style="color: rgb(215, 120, 120);" class="jintie">你好，这是一个大学生的作业，保证安全。</p>
+            <strong>而且随时不可能被<span class="jinggao">攻击</span>。</strong>
+        </small>
+
+    </p>
+</div>
+
+</html>
