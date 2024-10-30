@@ -65,7 +65,7 @@ function add_zuobiao()
 {
     var input = [];
     var m;
-    ch = "";
+    var ch = "";
     for (var i = 1; i <= 8; i++)
     {
         m = document.getElementById(`inputField${i}`).value;
@@ -84,6 +84,7 @@ function add_zuobiao()
 
     }
     s_sum += ch;
+    ch = "";
     if (input.length == 8)
     {   data.push([]);
         for (var i = 0; i < 4; i++)
