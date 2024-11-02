@@ -1,105 +1,97 @@
-class youbiao {
-    constructor() {
-            this.left_1 = [],//度数
-            this.left_2 = [],//分数
-            this.left_3 = [],//秒数
-            this.right_1 = [],
-            this.right_2 = [],
-            this.right_3 = [],
-            this.pingjunl = 0,
-            this.pingjunr = 0
-    }
-    pingjun() {
-        this.pingjunl = this.left.reduce((sum, value) => sum + value, 0) / (this.left.length || 1);
-        this.pingjunr = this.right.reduce((sum, value) => sum + value, 0) / (this.right.length || 1);
-    }
-    pingout() {
-        console.log("pingjunl: " + this.pingjunl);
-        console.log("pingjunr: " + this.pingjunr);
-    }
-}
-var youbiao1 = new youbiao();
-var youbiao2= new youbiao();
+var ub = 0.000084;
+var c = [];
+var t = [0, 0, 0];
+var n = 0;
 
-var left_n = 0;
-var right_n = 0;
-
-function is_need()
-{
-    if (document.getElementById("inputField").value != "" && document.getElementById("inputField2").value != "" && !isNaN(parseFloat(document.getElementById("inputField").value)) && !isNaN(parseFloat(document.getElementById("inputField2").value)))
-        return true;
+function new_check() {
     
-    return false;
-}
-
-
-function left_but_fu()
-{
-   
-        if (is_need()) {
-            document.getElementById("left_num").innerHTML = left_n;
-            youbiao1.left_1.push(parseFloat(document.getElementById("inputField").value));
-            youbiao1.left_2.push(parseFloat(document.getElementById("inputField2").value));
-            left_n++;
-            document.getElementById("left_num").innerHTML = left_n;
-        }    
-        else {
-            alert("请输入数字！");
-            }
-    
-
-   
-}
-function left_but_zh() {
-
-    if (is_need()) {
-        youbiao1.left_1.push(parseFloat(document.getElementById("inputField").value));
-        youbiao1.left_2.push(parseFloat(document.getElementById("inputField2").value));
-        left_n++;
+    document.getElementById("num").innerHTML = n;
+    document.getElementById("name").innerHTML = n+1;
+    if (n >= 3) {
+        document.getElementById("end_div").style.display = "block";
         
     }
-    else {
-        alert("请输入数字！");
+    else
+    {
+        document.getElementById("end_div").style.display = "none";
+        document.getElementById("name").innerHTML = n + 1;
     }
 
 }
-function but_check() {
-    if (left_n <= 3)
-    {
-        document.getElementById("left_num").innerHTML = left_n;
-        if (left_n == 3) {
-            document.getElementById("name").innerHTML ='‘+1’级左';
+
+function push()
+{
+    if (n < 3) {
+        for (var i = 0; i < 3; i++) {
+            if (document.getElementById(`inputField${i + 1}`).value != "")
+            {
+                t[i] = parseFloat(document.getElementById(`inputField${i + 1}`).value);
+                
+            }
+                
+            else {
+                t[i] = 0;
+            }
+            
+        }
+        var sum = t[0] + t[1] / 60 + t[2] / 3600;
+        sum = sum / 180 * Math.PI/2;
+        c.push(sum);
+        n++;
+        new_check();
+        for (var i = 0; i < 3; i++) {
+            
+             document.getElementById(`inputField${i + 1}`).value = "";
+
         }
     }
-    else
-    {
-        document.getElementById("left_num2").innerHTML = left_n-3;
+    else {
+        alert("你已经输入了三组数据了，不能再输入了！");
     }
-    
 
-    if(right_n <= 3)
+}
+
+function pop_button()
+{
+    if (n > 0)
     {
-        document.getElementById("right_num").innerHTML = right_n;
+        n--;
+        c.pop();
+        new_check();
     }
-    else
-    {
-        document.getElementById("right_num2").innerHTML = right_n-3;
+    else {
+        alert("你还没有输入数据！");
     }
 }
-        
 
-
-function left_but()
+function calculate()
 {
-  
-    if (left_n >= 0 && left_n < 3)
-        left_but_fu();
-    else if (left_n >= 3 && left_n <6)
+    var s="";
+    for (var i = 0; i < n; i++)
     {
-
+        s +=c[i].toFixed(6)+",";
     }
+    document.getElementById("result_t").innerHTML = s;
+    var sum = (c[0] + c[1] + c[2]) / 3;
+    document.getElementById("result_d").innerHTML = sum.toFixed(6);
+    var r =Math.sin(sum);
+    document.getElementById("result_w").innerHTML = (r/300).toFixed(9);
+    var ua = 0;
+    for(var i=0;i<n;i++)
+    {
+        ua += Math.pow(c[i]-sum,2);
+    }
+    ua = Math.sqrt(ua / 6) * 1.32;
+    document.getElementById("result_a").innerHTML = ua.toFixed(6);
+    document.getElementById("result_b").innerHTML = (ub).toFixed(6);
+    var u = Math.sqrt(ua * ua + ub * ub);
+    document.getElementById("result_e").innerHTML = u.toFixed(6);
+    var u_ = Math.sqrt(Math.pow(1 / Math.tan(sum), 2) * u * u + 0.001 * 0.001);
+    document.getElementById("result_f").innerHTML = u_.toFixed(9);
+    z = u_*r/300;
+    document.getElementById("result_g").innerHTML = z.toFixed(9);
+    
 
-    but_check();
     
 }
 

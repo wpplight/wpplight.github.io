@@ -124,3 +124,19 @@ background-color: #323232;
     /* 去除默认的焦点轮廓 */
     background-color: #686868;
 }
+input[type="number"] {
+    -webkit-appearance: textfield;
+    /* 适用于 WebKit 浏览器 */
+    -moz-appearance: textfield;
+    /* 适用于 Firefox */
+    appearance: textfield;
+    /* 适用于标准浏览器 */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* 隐藏 WebKit 浏览器的旋转按钮 */
+    margin: 0;
+    /* 不显示旋转按钮 */
+}
