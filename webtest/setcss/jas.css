@@ -75,13 +75,14 @@ background-color: #323232;
 }
 
  .back-button {
+    margin-top: 0px;
      background-color: black;
      /* 按钮背景色 */
      color: white;
      /* 按钮文字颜色 */
      border: none;
      /* 去掉边框 */
-     padding: 5px 0px;
+     padding: 0px 0px;
      /* 内边距 */
      border-radius: 5px;
      /* 圆角效果 */
@@ -91,12 +92,6 @@ background-color: #323232;
      /* 字体大小 */
      transition: background-color 0.3s, transform 0.3s;
      /* 动画效果 */
-    position: absolute;
-        /* 绝对定位 */
-        right: 50px;
-        /* 靠右对齐 */
-        top: 2px;
-        /* 距离顶部的距离 */
  }
 
  .back-button:hover {
