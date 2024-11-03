@@ -76,19 +76,18 @@ background-color: #323232;
 
  .back-button {
     margin-top: 0px;
+    padding-top: 0;
      background-color: black;
      /* 按钮背景色 */
      color: white;
      /* 按钮文字颜色 */
      border: none;
      /* 去掉边框 */
-     padding: 0px 0px;
-     /* 内边距 */
      border-radius: 5px;
      /* 圆角效果 */
      cursor: pointer;
      /* 鼠标变为手指 */
-     font-size: 16px;
+     font-size: 20px;
      /* 字体大小 */
      transition: background-color 0.3s, transform 0.3s;
      /* 动画效果 */
