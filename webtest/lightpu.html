@@ -10,7 +10,21 @@
 </head>
 <div class="header">
     <h1>三明治与山药与大学生</h1>
-    <button class="back-button" onclick="history.go(-1)">返回</button>
+    <div class="backbuttonc">
+    <button>
+        <div class="text">
+            <span><small>Back</small></span> 
+        </div>
+        <div class="clone">
+            <span>Back</span>
+        </div>
+        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg" width="20px">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+    </button>
+</div>
+    
 
 </div>
 
@@ -23,26 +37,43 @@
         <a href="contact.html" id="u">联系我们</a>&nbsp;
     </b>
 </nav>
-<br>
+
 <body>
     <div class="input-container">
         <p>（如果没有秒可以直接不输入）</p>
         <label for="inputField">请输入第<span id="name">1</span>个平均2θ的数值：</label>
-        <input type="number" id="inputField1" placeholder=""  class="i1">
-        <label for="inputField2">°度数&nbsp;&nbsp;&nbsp;</label>
-        <input type="number" id="inputField2" placeholder=""  class="i1">
-        <label for="inputField3">′分&nbsp;&nbsp;&nbsp;</label>
-        <input type="number" id="inputField3" placeholder=""  class="i1">
-        <label for="inputField4">″秒&nbsp;&nbsp;&nbsp;</label>
-        <button class="button1" onclick="push()">push</button>
+        <div class="form">
+            <input type="number" id="inputField1" placeholder="°度"  class="i3">
+            <label for="inputField3">&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="inputField2" placeholder="′分"  class="i3">
+            <label for="inputField3">&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="inputField3" placeholder="″秒" class="i3">
+        </div>
+       
         
     <p id="sum">当前已输入<span id="num">0</span>个数值</p>
-        
+    <button class="button1" onclick="push()">push</button>
     <button class="button1" onclick="pop_button()">pop</button>
     </div>
     <div id="end_div" style="display: none;" class="card">
         <br>
-        <button class="button1" onclick="calculate()">处理</button>
+        <button class="Btn-Container" onclick="calculate()">
+            <span class="text">处理!</span>
+            <span class="icon-Container">
+                <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                    <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                    <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                    <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                    <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                    <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                    <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                    <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                    <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                    <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                </svg>
+            </span>
+        </button>
         <p>
             三次θ的弧度值为：<span id="result_t"></span>。<hr>
             三次θ的平均值为：<span id="result_d"></span>。<br>
