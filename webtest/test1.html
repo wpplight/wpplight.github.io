@@ -4,21 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初始不可见按钮示例</title>
+    <title>Flexbox 示例</title>
     <style>
-        #myButton {
-            display: none;
-            /* 初始不可见 */
+        .headcontiner {
+            display: flex;
+            justify-content: space-between;
+            /* 子元素之间的间距 */
+            position: relative;
+            /* 修改为相对定位 */
+            top: 9px;
+            cursor: pointer;
+            width: 100%;
+            /* 让父容器占满宽度 */
+            max-width: 600px;
+            /* 设置最大宽度，方便调整 */
+            margin: 0 auto;
+            /* 居中父容器 */
+        }
+
+        .imgtomune {
+            width: 50px;
+        }
+
+        .headernote {
+            width: 200px;
+            text-align: center;
+            /* 使文字居中 */
+            /* Optional: add margin if needed */
+        }
+
+        .backbuttonforload {
+            width: 100px;
         }
     </style>
 </head>
 
 <body>
-
-    <div style="text-align: center;">
-    <img src="your-image.jpg" style="display: block; margin: 0 auto;"/>
-    <p>其他内容...</p>
-</div>
+    <div class="headcontiner">
+        <div class="imgtomune">图标</div>
+        <div class="headernote">标题</div>
+        <div class="backbuttonforload">返回</div>
+    </div>
 </body>
 
 </html>
