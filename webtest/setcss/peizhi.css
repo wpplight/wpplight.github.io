@@ -1,5 +1,5 @@
     nav {
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(42, 42, 42);
         color: white;
     }
     a {
@@ -15,7 +15,7 @@
 
     body {
         color:aliceblue;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(42, 42, 42);
 
     }
     h1
@@ -27,7 +27,7 @@
             border-color: #000000;
             border-bottom: 10px;
             color: white;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(43, 43, 43);
     }
 
 
@@ -36,7 +36,7 @@
             margin-bottom: 10px;
             margin-left: 0;
             margin-right: 0;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(42, 42, 42);
         color: white;
     }
 
@@ -61,7 +61,7 @@
                 /* 内边距 */
                 margin: 20px;
                 /* 外边距 */
-                background-color: #000000;
+                background-color:transparent;
                 /* 背景色 */
                 border: 1px solid #ffffff;
                 /* 边框 */
@@ -124,7 +124,7 @@
         }
         .link-container p {
             margin: 0;
-            background-color: black;
+            background-color: transparent;
         }
         .link-container img {
             width: 100px;
@@ -141,7 +141,7 @@
                     /* 使用 Flexbox 布局 */
                     flex-wrap: wrap;
                     /* 允许换行 */
-                    background-color: #000000;
+                    background-color: transparent;
                     margin: 0;
                     /* 外边距 */
                     gap: 20px;
@@ -168,7 +168,7 @@
                     /* 文字颜色 */
                     width: 250px;
                     /* 模块宽度 */
-                    background-color: rgb(0, 0, 0);
+                    background-color: transparent;
                 }
         
                 .module img {
@@ -187,7 +187,7 @@
                     /* 去除段落的默认外边距 */
                     text-align: center;
                     /* 文本居中 */
-                    background-color: rgb(0, 0, 0);
+                    background-color: transparent;
                 }
 
                 #u:hover {
@@ -253,7 +253,7 @@
         border-color: #000000;
         border-bottom: 0px;
         color: white;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(43, 43, 43);
     flex-grow: 1;
     /* 允许标题占用剩余空间 */
     word-wrap: break-word;
