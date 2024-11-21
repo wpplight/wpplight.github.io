@@ -214,6 +214,8 @@ color: #ffffff;
 /* 文字颜色 */
 width: 60%;
 /* 模块宽度 */
+font-size: 20px; /* 修改为你想要的字体大小 */
+line-height: 1.6; /* 可选，用于调整行间距 */
 }
 
 .modulea img {
@@ -261,3 +263,7 @@ word-wrap: break-word;
 max-width: calc(100% - 100px);
 /* 限制标题的最大宽度，以避免覆盖按钮 */
 }
+.no-indent {
+    text-indent: 0; /* 不设置首行缩进 */
+    margin-left: 0; /* 确保左对齐 */
+  }
