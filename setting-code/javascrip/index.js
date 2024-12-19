@@ -9,7 +9,7 @@ function shuaxin()
             // 现在运行时已经准备好
             resultPtr = _get();
             console.log(UTF8ToString(resultPtr));
-            mm = UTF8ToString(resultPtr).split("\r ");
+            mm = UTF8ToString(resultPtr).split(" ");
             // console.log(mm);
             _free(resultPtr);
             
