@@ -10,7 +10,7 @@ function shuaxin()
             resultPtr = _get();
             console.log(UTF8ToString(resultPtr));
             mm = UTF8ToString(resultPtr).split(" ");
-            // console.log(mm);
+            alert(mm);
             _free(resultPtr);
             
         let x=document.querySelectorAll('.card-title');
